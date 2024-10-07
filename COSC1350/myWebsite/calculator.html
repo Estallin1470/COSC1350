@@ -2,8 +2,8 @@
 
 <!--
 	Student Name: Emiley Stallings
-	File Name: template.html
-	Date: 09/01/2024
+	File Name: calculator.html
+	Date: 10/07/2024
  -->
 
 <html lang="en">
@@ -30,20 +30,32 @@
 				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About Me</a></li>
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="calculator.html">Tip</li>
+                <li><a href="calculator.html">Tip</a></li>
 			</ul>
 		</nav>
 
 		<!-- Use the main area to add the main content of the webpage -->
 		<main>
+            <h2> Thanks for the tip!</h2>
+            <form id="tipform">
+                <label for="billAmount">Bill Amount:</label>
+                <input type="number" id="billAmount" name="billAmount">
 
-			<p>Main content</p>
+                <label for="serviceQuality">Service Quality:</label>
+                <select id="serviceQuality" name="serviceQuality">
+                    <option value="0.25">Excellent (25%)</option>
+                    <option value="0.20">Good (20%)</option>
+                    <option value="0.15">Fair (15%)</option>
+                    <option value="0.10">Poor (10%)</option>
+                </select>
 
+                <button type="submit" id="calculateTip">Calculate Tip</button>
+            </form>
 		</main>
 
 		<!-- Use the footer area to add static footer content, such as email and copyright info. -->
 		<footer>
-			<p>&copy; Copyright 2024. All Rights Reserved. | Contact: <a href="mailto:emileystallings@westernwyoming.edu">emileystallings@westernwyoming.edu</a></p>
+			<p>&copy; Copyright 2024. All Rights Reserved. | Contact: <a>href="mailto:emileystallings@westernwyoming.edu">emileystallings@westernwyoming.edu</a></p>
 		</footer>
 
 	</body>

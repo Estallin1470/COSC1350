@@ -192,3 +192,42 @@ footer a {
     }
     
 }
+
+/* Style rules for the tip calculator form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 20px auto; /* Center form with margin */
+}
+
+label, input, select, button {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 10px;
+    background-color: #b9936c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dac292;
+}
+
+/* Optional: Center the form title */
+main h2 {
+    text-align: center;
+    color: #364a36;
+}
