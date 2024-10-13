@@ -198,7 +198,7 @@ form {
     display: flex;
     flex-direction: column;
     max-width: 300px;
-    margin: 20px auto; /* Center form with margin */
+    margin: 20px auto; 
 }
 
 label, input, select, button {
@@ -226,8 +226,17 @@ button:hover {
     background-color: #dac292;
 }
 
-/* Optional: Center the form title */
+/* Center the form title */
 main h2 {
     text-align: center;
     color: #364a36;
+}
+
+/*  tip result display */
+#tipResult {
+    margin-top: 20px;      
+    font-size: 14px;       
+    color:  #364a36;          
+    font-weight: bold;     
+    text-align: center;    
 }

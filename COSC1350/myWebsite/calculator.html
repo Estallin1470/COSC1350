@@ -3,7 +3,7 @@
 <!--
 	Student Name: Emiley Stallings
 	File Name: calculator.html
-	Date: 10/07/2024
+	Date: 10/13/2024
  -->
 
 <html lang="en">
@@ -39,7 +39,7 @@
             <h2> Thanks for the tip!</h2>
             <form id="tipform">
                 <label for="billAmount">Bill Amount:</label>
-                <input type="number" id="billAmount" name="billAmount">
+                <input type="number" id="billAmount" required>
 
                 <label for="serviceQuality">Service Quality:</label>
                 <select id="serviceQuality" name="serviceQuality">
@@ -51,12 +51,52 @@
 
                 <button type="submit" id="calculateTip">Calculate Tip</button>
             </form>
+
+			<!--display for the tip result-->
+			<div id="tipResult"></div>
 		</main>
 
 		<!-- Use the footer area to add static footer content, such as email and copyright info. -->
 		<footer>
-			<p>&copy; Copyright 2024. All Rights Reserved. | Contact: <a>href="mailto:emileystallings@westernwyoming.edu">emileystallings@westernwyoming.edu</a></p>
+			<p>&copy; Copyright 2024. All Rights Reserved. | Contact: emileystallings@westernwyoming.edu</p>
 		</footer>
+
+		<!-- Script for the tip calculator-->
+		<script>
+			
+			//Wait for page to load
+			window.onload = function() {
+
+				// Get the button element 
+				const calculateButton = document.getElementById("calculateTip");
+
+				//Add an Event listener to the button 
+				document.getElementById('tipform').addEventListener("submit", function(event) {
+					event.preventDefault();
+
+					// Get the input calues
+					const billAmount = parseFloat(document.getElementById("billAmount").value);
+					const serviceQuality = parseFloat(document.getElementById("serviceQuality").value);
+
+					// Validate that  the value is not empty or zero
+					if(isNaN(billAmount) || billAmount  <= 0) {
+						alert("Please enter a valid amount.");
+						return;
+					}
+
+					// Calculate the tip
+					const tipAmount = billAmount *  serviceQuality;
+
+					//Format the tip to be two decimal points
+					const formattedTip = tipAmount.toFixed(2);
+
+					//Display the tip amount in the paragraph placeholder
+					document.getElementById("tipResult").innerHTML = `<p>Tip Amount: $${formattedTip}</p>`;
+				});
+
+			};
+
+		</script>
 
 	</body>
 </html>
