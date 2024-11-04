@@ -240,3 +240,14 @@ main h2 {
     font-weight: bold;     
     text-align: center;    
 }
+
+/* Center text in the main content for the guessing game */
+main p {
+    text-align: center; 
+
+#result, #previousGuess {
+    text-align: center; 
+    margin-top: 15px; 
+}
+
+}
